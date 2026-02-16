@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📸 Wedding POV
 
-## Getting Started
+A modern, interactive web application for wedding guests to share photos, videos, and messages in real-time. Built with Next.js, TypeScript, and Supabase.
 
-First, run the development server:
+> 💡 **New to this project?** Check out [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md) for a comprehensive guide!
 
+## ✨ Features
+
+### Core Features
+- 📷 **Camera Integration** - Direct camera access on mobile
+- 🖼️ **Gallery Upload** - Choose from device gallery
+- 💬 **Messages** - Personalized notes with uploads
+- 🎨 **Live Preview** - See photos before uploading
+- 📤 **Progress Tracking** - Real-time upload progress
+
+### Gallery Features
+- 🔄 **Auto-Refresh** - Updates every 30 seconds
+- 📥 **Download** - Save any photo/video
+- ⌨️ **Keyboard Navigation** - Arrow keys, ESC, D for download
+- 🔍 **Lightbox View** - Full-screen photo viewer
+- 🎴 **Scrapbook Style** - Colorful polaroid cards
+
+### User Experience
+- 🔔 **Toast Notifications** - Beautiful feedback system
+- ✅ **File Validation** - Size/type checking (50MB limit)
+- 📝 **Character Counter** - Message length tracking
+- 💫 **Smooth Animations** - Floating hearts, sparkles, confetti
+- 🎨 **Aesthetic Design** - Romantic gradient backgrounds
+- 📱 **Mobile Optimized** - Touch-friendly interface
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Backend:** Supabase (PostgreSQL + Storage)
+- **Deployment:** Vercel-ready
+
+## 🚀 Quick Start
+
+### 1. Clone & Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd wedding-pov
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Setup Supabase
+Follow the detailed guide in [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Quick summary:**
+- Create storage bucket: `pov-uploads` (public)
+- Create `uploads` table with RLS policies
+- Get your API keys from Supabase dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure Environment
+```bash
+cp .env.local.example .env.local
+```
 
-## Learn More
+Add your keys to `.env.local`:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) 🎉
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Usage
 
-## Deploy on Vercel
+### For Guests
+1. **Upload Page** (`/`) - Take or choose photo, add message, upload
+2. **Gallery Page** (`/gallery`) - View all memories, download photos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Keyboard Shortcuts (Gallery)
+- `←` / `→` - Navigate photos
+- `D` - Download current photo
+- `ESC` - Close lightbox
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+### Deploy to Vercel
+```bash
+npm i -g vercel
+vercel
+```
+
+Or connect your GitHub repo to Vercel dashboard.
+
+**Don't forget to:**
+- Add environment variables in Vercel settings
+- Ensure Supabase bucket is public
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md) | 📖 Complete project guide with architecture, tech stack, and detailed explanations |
+| [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md) | 🔧 Step-by-step backend setup with SQL scripts |
+| [`FEATURES.md`](./FEATURES.md) | ✨ Comprehensive list of all 150+ features |
+| [`IMPROVEMENTS.md`](./IMPROVEMENTS.md) | 🎉 Recent enhancements and changelog |
+| [`QUICK_REFERENCE.md`](./QUICK_REFERENCE.md) | ⚡ Quick answers for common tasks |
+
+**Quick Navigation:**
+- 🆕 First time? → Start with [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md)
+- 🔧 Setting up? → Follow [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md)
+- 🎨 Customizing? → Check [`QUICK_REFERENCE.md`](./QUICK_REFERENCE.md)
+- ✨ What's included? → See [`FEATURES.md`](./FEATURES.md)
+
+## 🎨 Customization
+
+Want to personalize? Edit these files:
+- **Colors:** `src/app/page.tsx` and `src/app/gallery/page.tsx`
+- **Branding:** `src/app/layout.tsx` (metadata)
+- **Limits:** `src/app/page.tsx` (file size, message length)
+- **Auto-refresh:** `src/app/gallery/page.tsx` (interval timing)
+
+## 🤝 Contributing
+
+Ideas for improvements:
+- [ ] Image compression before upload
+- [ ] Bulk download as ZIP
+- [ ] Admin dashboard
+- [ ] QR code generator
+- [ ] Photo filters
+- [ ] Slideshow mode
+
+## 📄 License
+
+Open source - Feel free to use for your wedding!
+
+## 💖 Made With Love
+
+Built for capturing beautiful wedding memories through the eyes of your guests.
+
+**Questions?** Open an issue or check the documentation files above.
+
+**Happy Wedding! 🎊**

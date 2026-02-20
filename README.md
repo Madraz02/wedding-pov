@@ -2,6 +2,7 @@
 
 A modern, interactive web application for wedding guests to share photos, videos, and messages in real-time. Built with Next.js, TypeScript, and Supabase.
 
+> 🚀 **Want to get started quickly?** Follow [`GETTING_STARTED.md`](./GETTING_STARTED.md) for a 15-minute setup!  
 > 💡 **New to this project?** Check out [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md) for a comprehensive guide!
 
 ## ✨ Features
@@ -85,16 +86,24 @@ Open [http://localhost:3000](http://localhost:3000) 🎉
 ## 🚀 Deployment
 
 ### Deploy to Vercel
+
+**Quick Deploy:**
+1. Push code to GitHub
+2. Connect repo to Vercel
+3. Add environment variables in Vercel dashboard:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. Deploy!
+
+📖 **Full deployment guide:** See [`DEPLOYMENT.md`](./DEPLOYMENT.md) for detailed instructions
+
+**Via CLI:**
 ```bash
 npm i -g vercel
 vercel
 ```
 
-Or connect your GitHub repo to Vercel dashboard.
-
-**Don't forget to:**
-- Add environment variables in Vercel settings
-- Ensure Supabase bucket is public
+⚠️ **Important:** Add environment variables in Vercel settings before deploying!
 
 ## 📚 Documentation
 
@@ -105,12 +114,16 @@ Or connect your GitHub repo to Vercel dashboard.
 | [`FEATURES.md`](./FEATURES.md) | ✨ Comprehensive list of all 150+ features |
 | [`IMPROVEMENTS.md`](./IMPROVEMENTS.md) | 🎉 Recent enhancements and changelog |
 | [`QUICK_REFERENCE.md`](./QUICK_REFERENCE.md) | ⚡ Quick answers for common tasks |
+| [`DEPLOYMENT.md`](./DEPLOYMENT.md) | 🚀 Step-by-step deployment guide for Vercel |
+| [`GETTING_STARTED.md`](./GETTING_STARTED.md) | 🎯 15-minute quick start guide |
 
 **Quick Navigation:**
-- 🆕 First time? → Start with [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md)
-- 🔧 Setting up? → Follow [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md)
-- 🎨 Customizing? → Check [`QUICK_REFERENCE.md`](./QUICK_REFERENCE.md)
-- ✨ What's included? → See [`FEATURES.md`](./FEATURES.md)
+- 🚀 **Want to start fast?** → Follow [`GETTING_STARTED.md`](./GETTING_STARTED.md)
+- 🆕 **First time?** → Read [`PROJECT_OVERVIEW.md`](./PROJECT_OVERVIEW.md)
+- 🔧 **Setting up Supabase?** → Follow [`SUPABASE_SETUP.md`](./SUPABASE_SETUP.md)
+- 🌐 **Deploying?** → Check [`DEPLOYMENT.md`](./DEPLOYMENT.md)
+- 🎨 **Customizing?** → See [`QUICK_REFERENCE.md`](./QUICK_REFERENCE.md)
+- ✨ **What's included?** → Browse [`FEATURES.md`](./FEATURES.md)
 
 ## 🎨 Customization
 
